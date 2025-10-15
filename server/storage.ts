@@ -1,5 +1,5 @@
 import { type User, type InsertUser, type Order, type InsertOrder } from "@shared/schema";
-import { randomUUID } from "crypto";
+import { nanoid } from "nanoid";
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
@@ -32,14 +32,14 @@ export class MemStorage implements IStorage {
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
+    const id = nanoid();
     const user: User = { ...insertUser, id };
     this.users.set(id, user);
     return user;
   }
 
   async createOrder(insertOrder: InsertOrder & { amount: number }): Promise<Order> {
-    const id = randomUUID();
+    const id = `${Date.now()}-${nanoid(10)}`;
     const order: Order = { 
       ...insertOrder, 
       id, 
