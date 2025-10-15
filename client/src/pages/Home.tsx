@@ -5,7 +5,6 @@ import ServiceCard from "@/components/ServiceCard";
 import WhatsAppBanner from "@/components/WhatsAppBanner";
 import type { Service } from "@shared/schema";
 
-// todo: remove mock functionality - replace with real data from API
 const MOCK_SERVICES: Service[] = [
   {
     id: "mtn",
@@ -24,18 +23,6 @@ const MOCK_SERVICES: Service[] = [
     name: "Telecel",
     logo: "https://placehold.co/200x100/D32F2F/FFFFFF?text=Telecel",
     category: "telecom"
-  },
-  {
-    id: "wassce",
-    name: "WASSCE Checker",
-    logo: "https://placehold.co/200x100/4A148C/FFFFFF?text=WASSCE",
-    category: "utility"
-  },
-  {
-    id: "bece",
-    name: "BECE Checker",
-    logo: "https://placehold.co/200x100/4A148C/FFFFFF?text=BECE",
-    category: "utility"
   }
 ];
 
@@ -59,7 +46,7 @@ export default function Home() {
       <main className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Welcome to Triversa Bundles
+            Welcome to Budget Bundles
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Your trusted platform for affordable data bundles and services

@@ -8,7 +8,7 @@ export default function Header() {
         <Link href="/" data-testid="link-home">
           <div className="flex items-center gap-2 hover-elevate cursor-pointer rounded-md px-3 py-2">
             <Smartphone className="h-6 w-6 text-primary" />
-            <span className="text-lg font-semibold">Triversa Bundles</span>
+            <span className="text-lg font-semibold">Budget Bundles</span>
           </div>
         </Link>
         
