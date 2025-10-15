@@ -1,4 +1,4 @@
-# Triversa Bundles Design Guidelines
+# Budget Bundles Design Guidelines
 
 ## Design Approach
 **Reference-Based Approach**: Drawing inspiration from modern fintech/payment platforms like Stripe, PayPal, and the provided data-bundles.com reference, with emphasis on trust, clarity, and mobile-first transactional flows.
@@ -66,7 +66,7 @@
 ### Navigation Header
 - Sticky top bar with logo (left), navigation links (right)
 - Height: h-16, backdrop blur effect
-- Logo: Brand icon + "Triversa Bundles" text
+- Logo: Brand icon + "Budget Bundles" text
 - Links: Home, About, Contact (hidden on mobile, show in menu)
 
 ### Service Selection Cards
@@ -164,4 +164,4 @@
 ---
 
 ## Images
-No hero images required. This is a utility-focused transactional flow prioritizing speed and clarity. Use provider logos as primary visual elements (MTN, AirtelTigo, Telecel, WASSCE, BECE checker icons).
+No hero images required. This is a utility-focused transactional flow prioritizing speed and clarity. Use provider logos as primary visual elements (MTN, AirtelTigo, Telecel).
