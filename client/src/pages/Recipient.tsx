@@ -17,41 +17,40 @@ import {
 } from "@/components/ui/select";
 import type { Package } from "@shared/schema";
 
-// todo: remove mock functionality - replace with real data from API
 const MOCK_PACKAGES: Record<string, Package[]> = {
   mtn: [
-    { id: "pkg-1", serviceId: "mtn", name: "500MB Daily", dataAmount: "500MB", price: 3.00, validity: "Valid for 24 hours" },
-    { id: "pkg-2", serviceId: "mtn", name: "1GB Daily", dataAmount: "1GB", price: 5.00, validity: "Valid for 24 hours" },
-    { id: "pkg-3", serviceId: "mtn", name: "2GB Weekly", dataAmount: "2GB", price: 12.00, validity: "Valid for 7 days" },
-    { id: "pkg-4", serviceId: "mtn", name: "5GB Weekly", dataAmount: "5GB", price: 20.00, validity: "Valid for 7 days" },
-    { id: "pkg-5", serviceId: "mtn", name: "10GB Monthly", dataAmount: "10GB", price: 45.00, validity: "Valid for 30 days" },
-    { id: "pkg-6", serviceId: "mtn", name: "20GB Monthly", dataAmount: "20GB", price: 80.00, validity: "Valid for 30 days" },
-    { id: "pkg-7", serviceId: "mtn", name: "50GB Monthly", dataAmount: "50GB", price: 180.00, validity: "Valid for 30 days" },
-  ],
-  airteltigo: [
-    { id: "pkg-8", serviceId: "airteltigo", name: "500MB Daily", dataAmount: "500MB", price: 2.50, validity: "Valid for 24 hours" },
-    { id: "pkg-9", serviceId: "airteltigo", name: "1GB Daily", dataAmount: "1GB", price: 4.50, validity: "Valid for 24 hours" },
-    { id: "pkg-10", serviceId: "airteltigo", name: "3GB Weekly", dataAmount: "3GB", price: 15.00, validity: "Valid for 7 days" },
-    { id: "pkg-11", serviceId: "airteltigo", name: "6GB Weekly", dataAmount: "6GB", price: 25.00, validity: "Valid for 7 days" },
-    { id: "pkg-12", serviceId: "airteltigo", name: "12GB Monthly", dataAmount: "12GB", price: 50.00, validity: "Valid for 30 days" },
-    { id: "pkg-13", serviceId: "airteltigo", name: "25GB Monthly", dataAmount: "25GB", price: 95.00, validity: "Valid for 30 days" },
+    { id: "pkg-1", serviceId: "mtn", name: "1GB Bundle", dataAmount: "1GB", price: 6, validity: "Valid for 30 days" },
+    { id: "pkg-2", serviceId: "mtn", name: "2GB Bundle", dataAmount: "2GB", price: 11, validity: "Valid for 30 days" },
+    { id: "pkg-3", serviceId: "mtn", name: "3GB Bundle", dataAmount: "3GB", price: 16, validity: "Valid for 30 days" },
+    { id: "pkg-4", serviceId: "mtn", name: "4GB Bundle", dataAmount: "4GB", price: 21, validity: "Valid for 30 days" },
+    { id: "pkg-5", serviceId: "mtn", name: "5GB Bundle", dataAmount: "5GB", price: 25, validity: "Valid for 30 days" },
+    { id: "pkg-6", serviceId: "mtn", name: "6GB Bundle", dataAmount: "6GB", price: 30, validity: "Valid for 30 days" },
+    { id: "pkg-7", serviceId: "mtn", name: "8GB Bundle", dataAmount: "8GB", price: 36, validity: "Valid for 30 days" },
+    { id: "pkg-8", serviceId: "mtn", name: "10GB Bundle", dataAmount: "10GB", price: 46, validity: "Valid for 30 days" },
+    { id: "pkg-9", serviceId: "mtn", name: "15GB Bundle", dataAmount: "15GB", price: 65.5, validity: "Valid for 30 days" },
+    { id: "pkg-10", serviceId: "mtn", name: "20GB Bundle", dataAmount: "20GB", price: 85, validity: "Valid for 30 days" },
+    { id: "pkg-11", serviceId: "mtn", name: "25GB Bundle", dataAmount: "25GB", price: 105, validity: "Valid for 30 days" },
+    { id: "pkg-12", serviceId: "mtn", name: "30GB Bundle", dataAmount: "30GB", price: 125, validity: "Valid for 30 days" },
+    { id: "pkg-13", serviceId: "mtn", name: "40GB Bundle", dataAmount: "40GB", price: 160, validity: "Valid for 30 days" },
+    { id: "pkg-14", serviceId: "mtn", name: "50GB Bundle", dataAmount: "50GB", price: 206, validity: "Valid for 30 days" },
   ],
   telecel: [
-    { id: "pkg-14", serviceId: "telecel", name: "500MB Daily", dataAmount: "500MB", price: 2.80, validity: "Valid for 24 hours" },
-    { id: "pkg-15", serviceId: "telecel", name: "1GB Daily", dataAmount: "1GB", price: 5.00, validity: "Valid for 24 hours" },
-    { id: "pkg-16", serviceId: "telecel", name: "2.5GB Weekly", dataAmount: "2.5GB", price: 13.00, validity: "Valid for 7 days" },
-    { id: "pkg-17", serviceId: "telecel", name: "5GB Weekly", dataAmount: "5GB", price: 22.00, validity: "Valid for 7 days" },
-    { id: "pkg-18", serviceId: "telecel", name: "8GB Monthly", dataAmount: "8GB", price: 35.00, validity: "Valid for 30 days" },
-    { id: "pkg-19", serviceId: "telecel", name: "15GB Monthly", dataAmount: "15GB", price: 65.00, validity: "Valid for 30 days" },
-    { id: "pkg-20", serviceId: "telecel", name: "30GB Monthly", dataAmount: "30GB", price: 120.00, validity: "Valid for 30 days" },
+    { id: "pkg-15", serviceId: "telecel", name: "10GB Bundle", dataAmount: "10GB", price: 45, validity: "Valid for 30 days" },
+    { id: "pkg-16", serviceId: "telecel", name: "15GB Bundle", dataAmount: "15GB", price: 63, validity: "Valid for 30 days" },
+    { id: "pkg-17", serviceId: "telecel", name: "20GB Bundle", dataAmount: "20GB", price: 85, validity: "Valid for 30 days" },
+    { id: "pkg-18", serviceId: "telecel", name: "30GB Bundle", dataAmount: "30GB", price: 121, validity: "Valid for 30 days" },
+    { id: "pkg-19", serviceId: "telecel", name: "40GB Bundle", dataAmount: "40GB", price: 165, validity: "Valid for 30 days" },
+    { id: "pkg-20", serviceId: "telecel", name: "50GB Bundle", dataAmount: "50GB", price: 205, validity: "Valid for 30 days" },
   ],
-  wassce: [
-    { id: "pkg-21", serviceId: "wassce", name: "Single Result Check", dataAmount: "1 Check", price: 8.00, validity: "Instant access" },
-    { id: "pkg-22", serviceId: "wassce", name: "3 Results Check", dataAmount: "3 Checks", price: 20.00, validity: "Valid for 7 days" },
-  ],
-  bece: [
-    { id: "pkg-23", serviceId: "bece", name: "Single Result Check", dataAmount: "1 Check", price: 6.00, validity: "Instant access" },
-    { id: "pkg-24", serviceId: "bece", name: "3 Results Check", dataAmount: "3 Checks", price: 15.00, validity: "Valid for 7 days" },
+  airteltigo: [
+    { id: "pkg-21", serviceId: "airteltigo", name: "1GB Bundle", dataAmount: "1GB", price: 5, validity: "Valid for 30 days" },
+    { id: "pkg-22", serviceId: "airteltigo", name: "2GB Bundle", dataAmount: "2GB", price: 10, validity: "Valid for 30 days" },
+    { id: "pkg-23", serviceId: "airteltigo", name: "3GB Bundle", dataAmount: "3GB", price: 15, validity: "Valid for 30 days" },
+    { id: "pkg-24", serviceId: "airteltigo", name: "5GB Bundle", dataAmount: "5GB", price: 25, validity: "Valid for 30 days" },
+    { id: "pkg-25", serviceId: "airteltigo", name: "8GB Bundle", dataAmount: "8GB", price: 36, validity: "Valid for 30 days" },
+    { id: "pkg-26", serviceId: "airteltigo", name: "10GB Bundle", dataAmount: "10GB", price: 45, validity: "Valid for 30 days" },
+    { id: "pkg-27", serviceId: "airteltigo", name: "15GB Bundle", dataAmount: "15GB", price: 62, validity: "Valid for 30 days" },
+    { id: "pkg-28", serviceId: "airteltigo", name: "20GB Bundle", dataAmount: "20GB", price: 80, validity: "Valid for 30 days" },
   ],
 };
 
@@ -59,8 +58,6 @@ const SERVICE_NAMES: Record<string, string> = {
   mtn: "MTN",
   airteltigo: "AirtelTigo",
   telecel: "Telecel",
-  wassce: "WASSCE Checker",
-  bece: "BECE Checker"
 };
 
 export default function Recipient() {
