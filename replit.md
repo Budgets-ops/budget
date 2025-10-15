@@ -1,7 +1,7 @@
-# Triversa Bundles
+# Budget Bundles
 
 ## Overview
-Triversa Bundles is a web application for purchasing affordable data bundles and services for various telecom providers in Ghana. The platform supports MTN, AirtelTigo, Telecel, and also provides WASSCE/BECE checker services. Payments are processed through Paystack integration.
+Budget Bundles is a web application for purchasing affordable data bundles for various telecom providers in Ghana. The platform supports MTN, AirtelTigo, and Telecel. Payments are processed through Paystack integration.
 
 ## Project Architecture
 
@@ -32,7 +32,15 @@ Triversa Bundles is a web application for purchasing affordable data bundles and
 └── package.json
 ```
 
-## Recent Changes (October 14, 2025)
+## Recent Changes (October 15, 2025)
+- ✅ **Package Data Updated**: Replaced mock packages with real pricing data
+  - MTN: 14 packages (1GB - 50GB)
+  - Telecel: 6 packages (10GB - 50GB)
+  - AirtelTigo: 8 packages (1GB - 20GB)
+- ✅ **Site Rebranding**: Changed site name from "Triversa Bundles" to "Budget Bundles"
+- ✅ **Services Cleanup**: Removed WASSCE and BECE checker services
+
+## Previous Changes (October 14, 2025)
 - ✅ **GitHub Import Setup**: Configured project for Replit environment from fresh GitHub import
 - ✅ **Node.js Installation**: Installed Node.js 20 runtime and all dependencies
 - ✅ **Vite Configuration**: Updated vite.config.ts to allow all hosts for Replit proxy support
@@ -88,11 +96,9 @@ The app runs on port 5000 with both frontend and backend served from the same Ex
 - `npm run db:push` - Push database schema changes
 
 ## Services Supported
-1. **MTN** - Data bundles
-2. **AirtelTigo** - Data bundles
-3. **Telecom** - Data bundles
-4. **WASSCE Checker** - Examination result checking
-5. **BECE** - Examination result checking
+1. **MTN** - Data bundles (1GB to 50GB)
+2. **AirtelTigo** - Data bundles (1GB to 20GB)
+3. **Telecel** - Data bundles (10GB to 50GB)
 
 ## Key Features
 - Service selection interface
